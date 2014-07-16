@@ -1859,8 +1859,8 @@ body > img {
     width: 634px !important;
   }
   article#family .plane.right .planeWrapper .infoBlock.link {
-    right: 25% !important;
-    bottom: 101px !important;
+    right: 20% !important;
+    bottom: 135px !important;
   }
   article#family .plane.right .planeBg {
     background: none;
@@ -1869,19 +1869,18 @@ body > img {
     background-color: white;
   }
   article#family .plane.right .planeWrapper h1 {
-    color: #000;
     top: 10%;
     right: 0%;
     font-size: 26px;
     line-height: 26px;
   }
   article#family .plane.right .planeWrapper .infoBlock.info {
-    top: 19%;
-    color: #000;
-    right: 0;
+    top: 22%;
+    left: 428px;
   }
   article#family .infoBlock .description {
     font-size: 12px;
+    margin-top: 15px;
   }
   article#family .plane.right .planeWrapper .infoBlock.info .title {
     margin-bottom: 5px;
@@ -1949,7 +1948,21 @@ body > img {
   article#family .plane.right .planeBg {
     right: 302.25px !important;
   }
-  
+  article .planes .plane.right .planeWrapper .planeBg .planeContent {
+    top: 20px;
+    right: 5px;
+  }
+  article#family .plane.right .planeWrapper .infoBlock.info .title h2 {
+    color: #fff;
+  }
+  article#family .plane.right .planeWrapper .infoBlock.info .cost {
+    font-size: 14px !important;
+    margin-top: 20px;
+  }
+  article#family .plane.right .planeWrapper .infoBlock.info {
+    width: 180px;
+  }
+
   article#properties .plane.right .planeWrapper .infoBlock .left .carTitles {
       left: 18px;
       top: 285px;
