@@ -150,7 +150,10 @@ class window.Scroll
     @previousMedia = @currentMedia
     @_detectCurrentMedia()
 
+    console.debug @previousMedia, @currentMedia
+
     if @previousMedia != @currentMedia
+      console.debug 'change'
       clearTimeout @timeout
       @timeout = setTimeout () =>
         $(@objects.scroller).spritespin('destroy')

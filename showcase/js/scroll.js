@@ -193,7 +193,9 @@
     Scroll.prototype._resize = function() {
       this.previousMedia = this.currentMedia;
       this._detectCurrentMedia();
+      console.debug(this.previousMedia, this.currentMedia);
       if (this.previousMedia !== this.currentMedia) {
+        console.debug('change');
         clearTimeout(this.timeout);
         return this.timeout = setTimeout((function(_this) {
           return function() {

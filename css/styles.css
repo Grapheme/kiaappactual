@@ -1925,4 +1925,7 @@ body > img {
   article .slidesArrow .placer {
     margin-top: 213px;
   }
+  #bumpers, #lights {
+    width: 960px;
+  }
 }
