@@ -1928,4 +1928,19 @@ body > img {
   #bumpers, #lights {
     width: 960px;
   }
+  article#properties .plane.right .planeWrapper .infoBlock .left .carTitles {
+      left: 18px;
+      top: 285px;
+      width: 475px;
+  }
+  article#properties .carTitles li {
+      float: left;
+      margin-bottom: 10px;
+      transform: scale(0.83);
+      width: 200px;
+  }
+  article#properties .plane.right .planeWrapper .infoBlock .left .buttonProperties {
+      bottom: 135px;
+      right: 647px;
+  }
 }
