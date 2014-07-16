@@ -1254,7 +1254,7 @@ body > img {
     background-size: 100% 100%;
   }
   .header .decor-top {
-    height: 22px;
+    height: 23px;
   }
   .header .decor-right {
     width: 80px;
@@ -1870,17 +1870,18 @@ body > img {
   }
   article#family .plane.right .planeWrapper h1 {
     top: 10%;
-    right: 0%;
+    right: 50px;
     font-size: 26px;
     line-height: 26px;
   }
   article#family .plane.right .planeWrapper .infoBlock.info {
     top: 22%;
-    left: 428px;
+    left: 378px;
   }
   article#family .infoBlock .description {
     font-size: 12px;
     margin-top: 15px;
+    line-height: 15px;
   }
   article#family .plane.right .planeWrapper .infoBlock.info .title {
     margin-bottom: 5px;
@@ -1960,7 +1961,7 @@ body > img {
     margin-top: 20px;
   }
   article#family .plane.right .planeWrapper .infoBlock.info {
-    width: 180px;
+    width: 220px;
   }
 
   article#properties .plane.right .planeWrapper .infoBlock .left .carTitles {
@@ -1980,5 +1981,18 @@ body > img {
   }
   article#safety .plane.right .planeWrapper .infoBlock .itemDescription h4 {
     color: #fff;
+  }
+  article#properties .plane.right .planeWrapper .infoBlock .left .buttonProperties {
+    bottom: 119px;
+    right: 647px;
+  }
+  article#transmission .plane.right .planeBg {
+    background-position: -150px -1px;
+  }
+  article#rotate .plane.right .planeWrapper .mainBlock h1.largeTitle {
+      left: 112px;
+      top: 376px;
+      padding-left: 80px;
+      background-position: 20px 71%;
   }
 }
