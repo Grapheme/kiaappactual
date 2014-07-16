@@ -1965,4 +1965,7 @@ body > img {
       bottom: 135px;
       right: 647px;
   }
+  article#safety .plane.right .planeWrapper .infoBlock .itemDescription h4 {
+    color: #fff;
+  }
 }
