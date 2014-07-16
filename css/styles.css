@@ -1925,4 +1925,28 @@ body > img {
   article .slidesArrow .placer {
     margin-top: 213px;
   }
+
+  article#lights,
+  article#bumpers {
+    width: 960px;
+  }
+  article#lights .planes .plane.right .planeWrapper .planeBg,
+  article#bumpers .planes .plane.right .planeWrapper .planeBg {
+    right: 53px !important;
+  }
+  article#bumpers .plane.right .planeWrapper .infoBlock {
+    left: 200px;
+    top: 445px;
+  }
+  article#lights .plane.right .planeWrapper .infoBlock {
+    left: 185px;
+    top: 371px;
+  }
+  article#family .plane.right {
+    left: 340px !important;
+    background-color: #000 !important;
+  }
+  article#family .plane.right .planeBg {
+    right: 302.25px !important;
+  }
 }
