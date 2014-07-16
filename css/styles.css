@@ -1980,6 +1980,7 @@ body > img {
   article#properties .carTitles li {
       float: left;
       margin-bottom: 10px;
+      -webkit-transform: scale(0.83);
       transform: scale(0.83);
       width: 200px;
   }
@@ -2002,5 +2003,39 @@ body > img {
       top: 376px;
       padding-left: 80px;
       background-position: 20px 71%;
+  }
+  #buttonCost {
+    background-image: url("../showcase/img/button_complectation.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 55px;
+    margin-top: 60px;
+    width: 328px;
+  }
+  #buttonCost:hover {
+    background-position: 0 -60px;
+  }
+  #btnInfoBlock {
+      left: 433px;
+      opacity: 1;
+      position: absolute;
+      top: 378px;
+      z-index: 100;
+  }
+  article#panel .plane.right .planeWrapper .planeBgLayer2 {
+    background: none;
+  }
+  article#properties .plane.right .planeWrapper .infoBlock {
+      background-image: url("../showcase/img/pages/small/properties_car_gt.jpg");
+      background-position: 28px 73px;
+      background-repeat: no-repeat;
+      height: 340px;
+      margin-left: -600px;
+      margin-top: -170px;
+      top: 50%;
+      width: 1200px;
+      background-size: 401px auto;
   }
 }
