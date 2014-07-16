@@ -1,0 +1,78 @@
+.bg {
+  position: relative;
+  .clearfix();
+  .layer2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+}
+.bgf-width {
+  width: 100%;
+}
+.bgf-height {
+  height: 100%;
+}
+.parallax-viewport {
+  overflow: hidden;
+}
+.layer1 {
+  z-index: 10;
+}
+.layer3 {
+  z-index: 30;
+  margin-top: -230px;
+}
+.layer1,
+.layer3 {
+  position: fixed;
+}
+.ie8,
+.ie7 {
+  .navbar-nav {
+    i {
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+    .video {
+      i {
+        .sprite(@video);
+      }
+    }
+    .gear {
+      i {
+        .sprite(@gears);
+      }
+    }
+    .doc {
+      i {
+        .sprite(@doc);
+      }
+    }
+    .helm {
+      i {
+        .sprite(@helm);
+      }
+    }
+    .share {
+      i {
+        .sprite(@share);
+      }
+    }
+  }
+}
+
+//PRELOAD
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  z-index: 9999;
+}

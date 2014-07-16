@@ -1,0 +1,295 @@
+body {
+  & > img {
+    display: none;
+  }
+}
+
+.container-main {
+  margin-top: 180px;
+}
+.info-left {
+  float: left;
+  color: #fff;
+  font-family: 'designkotfbold';
+  margin-left: 260px;
+  .sub-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    span {
+      margin-left: -2px;
+    }
+  }
+  h1 {
+    color: #fff;
+  }
+}
+.info-right {
+  float: right;
+
+  .text {
+    text-shadow: 0 1px 0 rgba(255,255,255,0.7);
+    margin-bottom: 30px;
+  }
+}
+.button-link {
+  width: 169px;
+  height: 55px;
+  display: inline-block;
+  margin: -5px 0 0 0;
+  position: relative;
+  left: -15px;
+
+
+  &:hover {
+    i {
+      &:after {
+        opacity: 1;
+      }
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+
+  i {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    &:before {
+      .sprite(@browse);
+      display: block;
+      margin: 0 auto;
+      content: '';
+      transition: opacity 0.3s;
+    }
+    &:after {
+      .sprite(@browse-h);
+      display: block;
+      margin: 0 auto;
+      content: '';
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}
+
+.showcase-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+  text-align: center;
+  z-index: 100;
+}
+
+.showcase {
+  width: 242px;
+  height: 55px;
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    i {
+      &:after {
+        opacity: 1;
+      }
+      &:before {
+//        opacity: 0;
+      }
+    }
+  }
+
+  i {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    &:before {
+      .sprite(@more);
+      display: block;
+      margin: 0 auto;
+      content: '';
+    }
+    &:after {
+      .sprite(@more-h);
+      display: block;
+      margin: 0 auto;
+      content: '';
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}
+.state2 {
+  display: none;
+}
+.state3 {
+  display: none;
+}
+
+@media (max-width: 1280px) and (max-height: 600px) {
+  .showcase-wrapper {
+    position: fixed;
+    width: 100%;
+    bottom: 25px;
+    text-align: center;
+    left: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-height: 1000px) {
+  .showcase-wrapper {
+    bottom: 250px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .container-main {
+    margin-top: 51px;
+  }
+  .container {
+    width: 1260px;
+    padding: 0;
+  }
+  .info-left {
+    margin-left: 180px;
+    .sub-text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 13px;
+    }
+    h1 {
+      font-size: 55px;
+      line-height: 58px;
+    }
+  }
+  h2 {
+    font-size: 15px;
+    margin: 20px 0 20px 0;
+  }
+  .info-right {
+    margin-right: -10px;
+    .text {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  .layer3 {
+    margin-top: -340px;
+  }
+  .button-link {
+    margin: -4px 0px 0 0;
+    left: -15px;
+  }
+
+  .header {
+    .logo-block {
+      width: 100px;
+      .logo {
+        margin: 15px 0 0 37px;
+      }
+    }
+  }
+  .state1 {
+    display: none;
+  }
+  .state2 {
+    display: block;
+  }
+}
+@media (max-width: 1400px) {
+  .container-main {
+    margin-top: 54px;
+  }
+  .container {
+    width: 960px;
+    padding: 0;
+  }
+  .button-link {
+    margin: -4px 0 0 0;
+    left: -15px;
+  }
+  .info-left {
+    margin-left: 69px;
+    .sub-text {
+      margin-bottom: 10px;
+    }
+  }
+  .info-right {
+    margin-right: -84px;
+    .text {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 30px;
+    }
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  .layer3 {
+    margin-top: -320px;
+  }
+  .header {
+    .logo-block {
+      .logo {
+        margin: 15px 0 0 44px;
+      }
+    }
+  }
+  .state1 {
+    display: none;
+  }
+  .state2 {
+    display: none;
+  }
+  .state3 {
+    display: block;
+  }
+}
+
+@media (max-width: 1400px) and (max-height: 700px) {
+
+  .info-left {
+    margin-left: 58px;
+  }
+  .info-right {
+    margin-right: -12px!important;
+  }
+
+  .showcase {
+    width: 220px;
+    height: 40px;
+
+    i {
+      &:before {
+        .sprite(@more-small);
+      }
+      &:after {
+        .sprite(@more-small-h);
+      }
+    }
+  }
+
+  .button-link {
+    width: 171px;
+    height: 40px;
+    margin: -8px 0 0 0!important;
+
+    i {
+      &:before {
+        .sprite(@browse-small);
+      }
+      &:after {
+        .sprite(@browse-small-h);
+      }
+    }
+  }
+
+
+
+}

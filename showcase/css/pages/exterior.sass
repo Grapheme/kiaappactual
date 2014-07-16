@@ -1,0 +1,229 @@
+$alias: "exterior"
+
+article##{$alias}
+
+  .plane.right
+    .planeWrapper
+      width: 100%
+
+      .planeBgLayer2
+        background-image: url('../img/pages/normal/exterior_right_2.png')
+        -webkit-background-size: auto
+        background-size: auto
+
+      .planeBg
+        -webkit-background-size: auto
+        background-size: auto
+
+  .infoBlock
+    width: 450px
+    top: 55%
+    left: 10%
+
+    .title
+      height: 37px
+      h2
+        @include sprite($normal_exterior_right)
+
+  .tooltipsLayer
+    posiwhetion: absolute
+    top: 0
+    left: 0
+
+    .tooltip
+      position: absolute
+      cursor: pointer
+
+      .tooltipContainer
+        position: relative
+        top: 0
+        left: 0
+        width: 38px
+        height: 38px
+        z-index: 50
+
+        .image
+          width: 38px
+          height: 38px
+          background-position: 0 0
+          background-repeat: no-repeat
+          background-image: url(../img/tooltips_sprite.png)
+
+        .link
+          display: block
+          width: 38px
+          height: 38px
+          position: absolute
+          left: 0
+          top: 0
+          z-index: 1000
+
+        .tooltipBackground
+          position: absolute
+          left: 0
+          top: 0
+          width: 2600px
+          height: 35px
+          background-position: 0 0
+          background-repeat: no-repeat
+          background-image: url(../img/tooltip_plane.png)
+          z-index: 25
+
+          .title
+            color: #C41230
+            text-align: left
+            text-transform: uppercase
+            font-size: 14px
+            line-height: 35px
+            vertical-align: middle
+            padding-left: 50px
+
+          &.red
+            background-position: 0 -35px
+
+            .title
+              color: #ffffff
+
+      .sattelite
+        background-position: 0 0
+        background-repeat: no-repeat
+        background-image: url(../img/tooltips_sattelite.png)
+        width: 6px
+        height: 7px
+        position: absolute
+        top: 19px
+        left: 33px
+        @include transformOrigin(-15px, 0)
+        z-index: 100
+
+
+      &:active
+        .line
+          .title
+            color: #ff0000
+
+      &.bottom
+        .line
+          margin-left: -185px
+          @include transformOrigin(100%, 0)
+          background-image: url(../img/tooltips_line_bottom.png)
+          max-width: 195px!important
+          max-height: 290px!important
+
+          .title
+            top: auto
+            right: auto
+            bottom: 15px
+            left: 15px
+            text-align: left
+
+      &#lights
+        right: 700px
+        top: 383px
+
+      &#bumpers
+        right: 660px
+        top: 478px
+
+@media screen and (max-width: 2299px), screen and (max-height: 1124px)
+  article##{$alias}
+    @include setBackground($alias, #000000, false, true)
+
+@media screen and (min-width: 2300px) and (min-height: 1125px)
+  body
+    min-height: 1px
+  article##{$alias}
+    @include setBackgroundBig($alias, #000000, false, true)
+    .plane.right
+      .planeWrapper
+        .planeBgLayer2
+          background-image: url('../img/pages/big/exterior_right_2.png')
+          -webkit-background-size: auto
+          background-size: auto
+
+      .infoBlock
+        width: 400px
+        top: 50%
+
+        .title
+          height: 47px
+          h2
+            @include sprite($big_exterior_right)
+
+    .tooltipsLayer
+      position: absolute
+      top: 0
+      left: 0
+
+      .tooltip
+        &#lights
+          right: 1500px
+          top: 673px
+
+        &#bumpers
+          right: 1040px
+          top: 865px
+
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+
+    .plane.right
+      .planeBg
+        background-image: url("../img/pages/small/" + $alias + "_right.jpg")!important
+        -webkit-background-size: auto !important
+        background-size: auto !important
+
+      .planeWrapper
+
+        .planeBgLayer2
+          background-image: url("../img/pages/small/" + $alias + "_right_2.png")
+          -webkit-background-size: auto !important
+          background-size: auto !important
+
+        .infoBlock
+          top: 50%
+          margin-top: -80px
+          left: 82px
+          width: 600px
+
+          .title
+            height: 36px
+
+    .tooltipsLayer
+      .tooltip
+        &#lights
+          right: 500px
+          top: 267px
+
+        &#bumpers
+          right: 445px
+          top: 345px
+
+
+
+@-moz-keyframes blinker
+  0%
+    opacity: 1
+  50%
+    opacity: 0.6
+  100%
+    opacity: 1
+
+
+@-webkit-keyframes blinker
+  0%
+    opacity: 1
+  50%
+    opacity: 0.6
+  100%
+    opacity: 1
+
+
+@keyframes blinker
+  0%
+    opacity: 1
+  50%
+    opacity: 0.6
+  100%
+    opacity: 1

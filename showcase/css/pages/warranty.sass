@@ -1,0 +1,65 @@
+$alias: "warranty"
+
+article##{$alias}
+  .plane.right
+    .planeWrapper
+      min-width: 100%
+
+  .infoBlock
+    .title
+      height: 60px
+
+      h2
+        @include sprite($normal_warranty_right)
+
+    width: 405px
+    height: 380px
+    top: 50%
+    margin-top: -190px
+    left: 10%
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.right
+      .planeWrapper
+        .infoBlock
+          bottom: 25px
+          .title
+            //height: 50px
+            margin-bottom: 34px
+
+            h2
+              //font-size: 25px
+
+          .warrantyPic
+            margin-top: 20px
+
+@media screen and (max-width: $bigMinWidth)
+  article##{$alias}
+    @include setBackground($alias, #000000, false, true)
+
+@media screen and (min-width: $bigMinWidth+1)
+  article##{$alias}
+    @include setBackgroundBig($alias, #000000, false, true)
+
+    .infoBlock
+      width: 800px
+      height: 520px
+      margin-top: -260px
+      left: 10%
+
+      .title
+        height: 120px
+        margin-bottom: 60px
+
+        h2
+          margin-left: 40px
+          padding: 0
+          @include sprite($big_warranty_right)
+
+      .description
+        padding-left: 40px
+        width: 550px
+
+        p.warrantyPic
+          margin-top: 60px

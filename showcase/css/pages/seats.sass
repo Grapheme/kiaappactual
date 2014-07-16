@@ -1,0 +1,93 @@
+$alias: "seats"
+
+article##{$alias}
+  .plane.left
+    color: #ffffff
+
+    .infoBlock
+      width: 362px
+      top: 60%
+      left: 15%
+
+      .title
+        height: 37px
+        h2
+          @include sprite($normal_seats_left)
+
+  .plane.right
+    color: #ffffff
+    .planeWrapper
+      min-width: 100%
+      position: relative
+
+      .planeBgLayer2
+        background-image: url('../img/pages/normal/seats_right_2.jpg')
+
+      .infoBlock
+        width: 362px
+        top: 35%
+        left: 10%
+
+
+        .title
+          height: 37px
+          h2
+            @include sprite($normal_seats_right)
+
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.left
+      .infoBlock
+        .title
+          //height: 36px
+
+    .plane.right
+      .planeWrapper
+        .infoBlock
+          .title
+            //height: 36px
+
+@media screen and (max-width: $bigMinWidth)
+  article##{$alias}
+    @include setBackground($alias, #000000, true, false, #14366F)
+
+@media screen and (min-width: $bigMinWidth+1)
+  article##{$alias}
+    @include setBackgroundBig($alias, #000000, true, false, #14366F)
+
+    .plane.left
+      .infoBlock
+        width: 500px
+        //top: 900px
+        //left: 500px
+
+        .title
+          height: 40px
+
+    .plane.right
+      .planeWrapper
+
+        .infoBlock
+          width: 500px
+          //top: 536px
+          //right: 1307px
+
+
+@media screen and (min-width: $bigMinWidth+1) and (min-height: $bigMinHeight+1)
+  article##{$alias}
+
+    .plane.left
+      .infoBlock
+        .title
+          height: 47px
+          h2
+            @include sprite($big_seats_left)
+
+    .plane.right
+      .planeWrapper
+        .infoBlock
+          .title
+            height: 47px
+            h2
+              @include sprite($big_seats_right)

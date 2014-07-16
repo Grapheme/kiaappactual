@@ -1,0 +1,162 @@
+$alias: "safety"
+
+article##{$alias}
+  .slidesArrow
+    display: none
+
+  .plane.left
+    color: #000000
+
+  .plane.right
+    color: #ffffff
+    .planeWrapper
+      min-width: 530px
+      position: relative
+
+      .closeButton
+        display: none
+
+      .infoBlock
+        width: 430px
+        right: 60px
+        height: 320px
+        top: 50%
+        margin-top: -160px
+
+        .title
+          height: 48px
+
+          h2
+            @include sprite($normal_safety_right)
+
+        .itemDescription
+          padding-top: 30px
+          width: 380px
+          line-height: 24px
+
+          h4
+            margin: 0
+            text-transform: uppercase
+            font-size: 14px
+
+
+
+
+        .buttonSafety
+          display: block
+          width: 266px
+          height: 55px
+          background-position: 0 0
+          background-repeat: no-repeat
+          background-image: url(../img/button_safety.png)
+          cursor: pointer
+          margin-top: 40px
+          
+          &:hover
+            background-position: 0 -74px
+
+          &:active
+            background-position: 0 -147px
+
+  .safetyIcons
+    display: block
+    margin: 0
+    padding: 0
+    width: 100%
+
+    $iconWidth: 40px
+    $iconHeight: 36px
+
+    li
+      list-style-type: none
+      margin: 0 5px 0 0
+      padding: 0
+      display: inline-block
+      text-align: center
+
+      i.safetyIcon
+        display: inline-block
+        width: 40px
+        height: 36px
+        background-repeat: no-repeat
+        background-image: url(../img/pages/safety_icons.png)
+
+        @for $i from 0 through 8
+          &.safetyIcon_#{$i+1}
+            background-position: -1*$iconWidth*$i 0
+
+            &:hover
+              background-position: -1*$iconWidth*$i -36px
+
+            &.active
+              background-position: -1*$iconWidth*$i -72px
+
+              &:hover
+                background-position: -1*$iconWidth*$i -72px
+
+
+
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.right
+      .planeWrapper
+        min-width: 470px
+        .infoBlock
+
+          width: 390px
+          right: 50px
+
+          .title
+            //height: 50px
+            margin-bottom: 34px
+
+            h2
+              //font-size: 25px
+
+          .itemDescription
+            padding-top: 25px
+            width: 340px
+            line-height: 28px
+
+            h4
+              font-size: 13px
+              line-height: 22px
+
+            .safetyItemText
+              font-size: 14px
+              font-weight: normal
+              line-height: 22px
+
+    .safetyIcons
+      li
+        margin: 0 1px 0 0
+
+@media screen and (max-width: $bigMinWidth), screen and (max-height: $bigMinHeight)
+  article##{$alias}
+    @include setBackground($alias, #000000, true, true)
+
+@media screen and (min-width: $bigMinWidth+1) and (min-height: $bigMinHeight+1)
+  body
+    min-height: 1px
+  article##{$alias}
+    @include setBackgroundBig($alias, #000000, true, true)
+    .plane.right
+      .planeWrapper
+        min-width: 960px
+
+        .infoBlock
+          width: 700px
+          right: 200px
+
+          .title
+            height: 134px
+
+            h2
+              font-size: 0
+              margin-left: 40px
+              @include sprite($big_safety_right)
+
+
+          .description
+            padding-left: 40px

@@ -1,0 +1,72 @@
+$alias: "pipes"
+
+article##{$alias}
+  .plane.left
+    color: #000000
+
+    .infoBlock
+      width: 362px
+      top: 10%
+      left: 30%
+
+      .title
+        height: 14px
+        h2
+          @include sprite($normal_pipes_left)
+
+  .plane.right
+    color: #ffffff
+    .planeWrapper
+      min-width: 100%
+      position: relative
+
+      .planeBgLayer2
+        background-image: url('../img/pages/normal/pipes_right_2.jpg')
+
+      .infoBlock
+        width: 362px
+        bottom: 15%
+        left: 0
+
+
+        .title
+          height: 37px
+          h2
+            @include sprite($normal_pipes_right)
+
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.left
+      .infoBlock
+        top: 20%
+
+
+@media screen and (max-width: $bigMinWidth), screen and (max-height: $bigMinHeight)
+  article##{$alias}
+    @include setBackground($alias, #000000, true, false, #ffffff)
+
+@media screen and (min-width: $bigMinWidth+1) and (min-height: $bigMinHeight+1)
+  body
+    min-height: 1px
+  article##{$alias}
+    @include setBackgroundBig($alias, #000000, true, false, #ffffff)
+
+    .plane.left
+      .infoBlock
+        width: 400px
+
+        .title
+          height: 18px
+          h2
+            @include sprite($big_pipes_left)
+
+    .plane.right
+      .planeWrapper
+
+        .infoBlock
+          width: 450px
+          .title
+            height: 47px
+            h2
+              @include sprite($big_pipes_right)

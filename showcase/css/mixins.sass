@@ -1,0 +1,91 @@
+// Mixin for replace bg in small resolutions
+@mixin setBackground ($alias, $color, $left, $right, $color2:transparent)
+
+  $urlLeft: none
+  $urlLeftLine: none
+
+  @if $left
+    $urlLeft: url("../img/pages/normal/" + $alias + "_left.jpg")
+    $urlLeftLine: url("../img/pages/" + $alias + "_left_line.png")
+
+  $urlRight: none
+  $urlRightLine: none
+
+  @if $right
+    $urlRight: url("../img/pages/normal/" + $alias + "_right.jpg")
+    $urlRightLine: url("../img/pages/" + $alias + "_right_line.png")
+
+    background-color: $color2
+
+  br
+    &.small
+      display: inline
+
+    &.big
+      display: none
+
+  .plane.left
+    background-color: $color2
+    background-image: $urlLeft
+
+    .titleLine
+      background-image: $urlLeftLine
+
+  .plane.right
+    background-color: $color
+    .planeBg
+      background-image: $urlRight
+
+    .titleLine
+      background-image: $urlRightLine
+
+// Mixin for replace bg in big resolutions
+@mixin setBackgroundBig ($alias, $color, $left, $right, $color2:transparent)
+
+  $urlLeft: none
+  $urlLeftLine: none
+
+  @if $left
+    $urlLeft: url("../img/pages/big/" + $alias + "_left_big.jpg")
+    $urlLeftLine: url("../img/pages/" + $alias + "_left_line.png")
+
+  $urlRight: none
+  $urlRightLine: none
+
+  @if $right
+    $urlRight: url("../img/pages/big/" + $alias + "_right_big.jpg")
+    $urlRightLine: url("../img/pages/" + $alias + "_right_line.png")
+
+
+  background-color: $color2
+
+  br
+    &.small
+      display: none
+
+    &.big
+      display: inline
+
+  .plane.left
+    background-color: $color2
+    background-image: $urlLeft
+
+    .titleLine
+      background-image: $urlLeftLine
+
+  .plane.right
+    background-color: $color
+    .planeBg
+      background-image: $urlRight
+
+    .titleLine
+      background-image: $urlRightLine
+
+
+
+@mixin transformOrigin ($x, $y)
+  -webkit-transform-origin: $x $y
+  -moz-transform-origin: $x $y
+  -o-transform-origin: $x $y
+  -ms-transform-origin: $x $y
+  transform-origin: $x $y

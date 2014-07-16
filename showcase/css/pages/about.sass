@@ -1,0 +1,154 @@
+$alias: "about"
+
+article##{$alias}
+  .plane.left
+    background-image: none
+
+  .plane.right
+    .planeWrapper
+      min-width: 100%
+
+      .planeBg
+        background-position: 50% 0
+
+  .infoBlock
+    width: 340px
+    right: 100px
+
+    &.both
+      position: static
+      top: auto
+      bottom: auto
+      left: auto
+      right: auto
+
+    &.links
+      top: 20%
+
+    &.social
+      bottom: 20%
+
+    .aboutButtons
+      margin: 0
+      padding: 0
+
+      li
+        list-style-type: none
+        margin: 0 0 20px 0
+
+        a
+          display: block
+          width: 337px
+          height: 46px
+          background-position: 0 0
+          background-repeat: no-repeat
+          background-image: url(../img/pages/about_buttons.png)
+          cursor: pointer
+          
+          &.bTestDrive
+            background-position: 0 0
+            
+          &.bView
+            background-position: 0 -49px
+            
+          &.bSolutions
+            background-position: 0 -101px
+
+    .aboutSocial
+      font-size: 14px
+      margin-left: 30px
+      margin-top: 120px
+
+
+    .aboutSocialIcons
+      margin: 10px 0 0 0
+      padding: 0
+
+      li
+        list-style-type: none
+        float: left
+        margin: 0
+
+        i
+          display: block
+          width: 69px
+          height: 52px
+          background-position: 0 0
+          background-repeat: no-repeat
+          background-image: url(../img/pages/about_social.png)
+          cursor: pointer
+
+        &.fb
+
+          i
+            background-position: 0 0
+
+            &:hover
+              background-position: 0 -62px
+
+            &:active
+              background-position: 0 -124px
+
+        &.vk
+
+          i
+            background-position: -74px 0
+
+            &:hover
+              background-position: -74px -62px
+
+            &:active
+              background-position: -74px -124px
+
+        &.tw
+
+          i
+            background-position: -148px 0
+
+            &:hover
+              background-position: -148px -62px
+
+            &:active
+              background-position: -148px -124px
+
+@media screen and (max-width: $bigMinWidth), screen and (max-height: $bigMinHeight)
+  article##{$alias}
+    @include setBackground($alias, #000000, false, true)
+    .plane.left
+      background-image: none
+
+@media screen and (min-width: $bigMinWidth+1) and (min-height: $bigMinHeight+1)
+  body
+    min-height: 1px
+  article##{$alias}
+    @include setBackgroundBig($alias, #000000, false, true)
+    .plane.left
+      background-image: none
+    .plane.right
+      .planeWrapper
+        .infoBlock.both
+          position: absolute
+          width: 400px
+          top: 40%
+          right: 10%
+
+          .infoBlock.links, .infoBlock.social
+            position: relative
+            right: auto
+            top: auto
+            bottom: auto
+            left: auto
+
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .infoBlock
+      &.social
+        bottom: 40px
+
+      .aboutButtons
+        li
+          a
+            width: 334px
+            height: 40px
+            background-image: url(../img/pages/about_buttons_small.png)

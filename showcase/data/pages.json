@@ -1,0 +1,86 @@
+{
+    "pages": [
+        {
+            "type": "planes",
+            "alias": "technology",
+            "inMenu": true,
+            "title": "Описание"
+        },
+        {
+            "type": "planes",
+            "alias": "engine",
+            "inMenu": true,
+            "title": "Технологии"
+        },
+        {
+            "type": "planes",
+            "alias": "exterior",
+            "inMenu": true,
+            "title": "Экстерьер"
+        },
+        {
+            "type": "planes",
+            "alias": "pipes"
+        },
+        {
+            "type": "planes",
+            "alias": "wheels"
+        },
+        {
+            "type": "planes",
+            "alias": "brakes"
+        },
+        {
+            "type": "planes",
+            "alias": "interior",
+            "inMenu": true,
+            "title": "Интерьер"
+        },
+        {
+            "type": "planes",
+            "alias": "panel"
+        },
+        {
+            "type": "planes",
+            "alias": "transmission"
+        },
+        {
+            "type": "planes",
+            "alias": "seats"
+        },
+        {
+            "type": "planes",
+            "alias": "pedals"
+        },
+        {
+            "type": "planes",
+            "alias": "rotate",
+            "inMenu": true,
+            "title": "Общий вид"
+        },
+        {
+            "type": "planes",
+            "alias": "safety",
+            "inMenu": true,
+            "title": "Безопасность"
+        },
+        {
+            "type": "planes",
+            "alias": "warranty"
+        },
+        {
+            "type": "planes",
+            "alias": "properties"
+        },
+        {
+            "type": "planes",
+            "alias": "family",
+            "inMenu": true,
+            "title": "Семейство"
+        },
+        {
+            "type": "planes",
+            "alias": "about"
+        }
+    ]
+}

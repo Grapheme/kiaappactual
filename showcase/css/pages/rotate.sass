@@ -1,0 +1,201 @@
+$alias: "rotate"
+
+
+article##{$alias}
+  .plane.right
+    .planeWrapper
+      min-width: 100%
+      color: #000000
+
+      .planeBg
+        background: #ffffff
+
+    .mainBlock
+      width: 960px
+      margin: 0 auto
+      padding-top: 100px
+      position: relative
+
+    .leftBlock
+      width: 500px
+      float: left
+
+      .rotateWrapper
+        position: relative
+        width: 600px
+        height: 360px
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+        ul.rotateArrows
+          position: absolute
+          width: 420px
+          padding: 0
+          top: 40px
+          left: 50%
+          margin: 0 0 0 -210px
+          z-index: 100
+
+          li
+            float: left
+            width: 50%
+            list-style-type: none
+            padding: 0
+            margin: 0
+
+            a
+              display: block
+              cursor: pointer
+              width: 13px
+              height: 21px
+              background-repeat: no-repeat
+              background-position: 0 0
+              background-image: url(../img/3d_arrows.png)
+
+              &.left
+                float: left
+                background-position: 0 0
+                &:hover
+                  background-position: -41px 0
+
+              &.right
+                float: right
+                background-position: -21px 0
+                &:hover
+                  background-position: -62px 0
+
+
+      .rotate3d
+        min-width: 600px
+        min-height: 367.25px
+        position: absolute
+        z-index: 100
+        margin-top: -40px
+
+        &.ceed
+          background-image: url(../img/3d/ceed_normal.png)
+          background-position: -3600px -1469px
+          background-repeat: no-repeat
+
+        &.ceed_pro
+          background-image: url(../img/3d/ceed_pro_normal.png)
+          background-position: -3600px -1469px
+          background-repeat: no-repeat
+
+
+    .rightBlock
+      padding-left: 720px
+
+    .carTitles
+      margin: 140px 0 0 0
+
+    h1.largeTitle
+      margin-left: 60px
+      font-size: 0
+      @include sprite($normal_rotate_right)
+      float: right
+      margin-top: 0
+
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.right
+      .planeWrapper
+        .mainBlock
+          width: 1140px
+          padding-top: 95px
+
+          .carTitles
+            margin: 0
+
+          .leftBlock
+            .rotateWrapper
+              height: 350px
+
+          .rightBlock
+            padding-left: 640px
+                                
+          h1.largeTitle
+            //text-transform: uppercase
+            //font-size: 42px
+            //line-height: 47px
+            //padding-left: 0
+            float: none
+            margin-top: 0
+            position: absolute
+            left: 647px
+            top: 246px
+            margin-left: 0
+            @include sprite($small_rotate_right)
+
+
+
+
+@media screen and (max-width: $bigMinWidth) and (min-height: $bigMinHeight)
+  body
+    min-height: 0
+
+  article##{$alias}
+    @include setBackground($alias, #ffffff, false, false)
+
+@media (min-width: $bigMinWidth+1) and (min-height: $bigMinHeight+1)
+  body
+    min-height: 1px
+
+  article##{$alias}
+
+    @include setBackgroundBig($alias, #ffffff, false, false)
+    .plane.right
+      .planeWrapper
+        .mainBlock
+          width: 1400px
+          padding-top: 10%
+
+      .leftBlock
+        width: 980px
+
+        .rotateWrapper
+          position: relative
+          width: 1000px
+          height: 550px
+          margin-top: -5%
+
+          ul.rotateArrows
+            width: 700px
+            margin: 0 0 0 -350px
+            margin-top: 5%
+
+          .rotate3d
+            min-width: 980px
+            min-height: 600px
+
+            &.ceed
+              background-image: url(../img/3d/ceed.png)
+              background-position: -5880px -2400px
+
+            &.ceed_pro
+              background-image: url(../img/3d/ceed_pro.png)
+              background-position: -5880px -2400px
+
+      .rightBlock
+        padding-left: 1100px
+
+        .carSelector
+          margin: 340px 0 0 0
+
+      h1.largeTitle
+        float: left
+        margin-left: 450px
+
+
+body#body_rotate
+  .mainMenuToggle
+    i
+      background-position: -38px 0
+  &:hover
+    i
+      background-position: -38px -22px

@@ -1,0 +1,125 @@
+// ==========================================================================
+// Mixins.LESS
+// ==========================================================================
+
+
+// -------------------------------------
+// Basic
+// -------------------------------------
+
+.clearfix () {
+    // *zoom: 1; // For IE 6/7
+
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+}
+
+.box-sizing ( @type: border-box ) {
+    -webkit-box-sizing: @type;
+       -moz-box-sizing: @type;
+            box-sizing: @type;
+}
+
+.center-block () {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inline-block ( @verticalAlign: middle ) {
+    display: inline-block;
+    vertical-align: @verticalAlign;
+}
+
+.placeholder ( @color: @color-gray ) {
+    &::-webkit-input-placeholder {
+        color: @color;
+        text-overflow: ellipsis;
+    }
+    &:-moz-placeholder {
+        color: @color !important;
+        text-overflow: ellipsis;
+    }
+    &::-moz-placeholder {
+        color: @color !important;
+        text-overflow: ellipsis;
+    }
+    &:-ms-input-placeholder {
+        color: @color !important;
+        text-overflow: ellipsis;
+    }
+}
+
+.text-shadow ( @string: 0 1px 3px rgba(0, 0, 0, 0.25) ) {
+    text-shadow: @string;
+}
+
+.opacity ( @opacity: 0.5 ) {
+    -webkit-opacity: @opacity;
+     -khtml-opacity: @opacity;
+       -moz-opacity: @opacity;
+            opacity: @opacity;
+
+    // IE
+    @opacity-ie: ( @opacity * 100 );
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=@opacity-ie);
+    filter: alpha(opacity=@opacity-ie);
+}
+
+.colorize-bg ( @color: @color-white, @alpha: 1 ) {
+    background: hsla( hue(@color), saturation(@color), lightness(@color), @alpha );
+}
+
+//.gradient ( @colorStart: @color-gray_l1, @colorEnd: @color-gray_d1, @percentStart: 0%, @percentEnd: 100% ) {
+//    background-image: -webkit-gradient(linear, left @percentStart, left @percentEnd, from(@colorStart), to(@colorEnd)); // Safari 4+, Chrome 2+
+//    background-image: -webkit-linear-gradient(top, @colorStart, @percentStart, @colorEnd, @percentEnd); // Safari 5.1+, Chrome 10+
+//    background-image: -moz-linear-gradient(top, @colorStart @percentStart, @colorEnd @percentEnd); // FF 3.6+
+//    background-image: -ms-linear-gradient(top, @colorStart @percentStart, @colorEnd @percentEnd);
+//    background-image: -o-linear-gradient(top, @colorStart @percentStart, @colorEnd @percentEnd);
+//    background-image: linear-gradient(to bottom, @colorStart @percentStart, @colorEnd @percentEnd); // Standard, IE10
+//    background-repeat: repeat-x;
+//    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@colorStart),argb(@colorEnd))); // IE9 and down
+//}
+//
+//.horizontal-gradient ( @colorStart: @color-gray_l1, @colorEnd: @color-gray_d1, @percentStart: 0%, @percentEnd: 100% ) {
+//    background-image: -webkit-gradient(linear, @percentStart top, @percentEnd top, from(@colorStart), to(@colorEnd)); // Safari 4+, Chrome 2+
+//    background-image: -webkit-linear-gradient(left, color-stop(@colorStart @percentStart), color-stop(@colorEnd @percentEnd)); // Safari 5.1+, Chrome 10+
+//    background-image: -moz-linear-gradient(left, @colorStart @percentStart, @colorEnd @percentEnd); // FF 3.6+
+//    background-image: -ms-linear-gradient(left, @colorStart @percentStart, @colorEnd @percentEnd);
+//    background-image: -o-linear-gradient(left, @colorStart @percentStart, @colorEnd @percentEnd);
+//    background-image: linear-gradient(to right, @colorStart @percentStart, @colorEnd @percentEnd); // Standard, IE10
+//    background-repeat: repeat-x;
+//    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@colorStart),argb(@colorEnd))); // IE9 and down
+//}
+
+// Reset filters for IE
+.reset-filter () {
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+.img-responsive ( @display: block, @margin: 0 auto ) {
+    display: @display;
+    margin: @margin;
+    max-width: 100%;
+    height: auto;
+}
+
+.bordered ( @top-color: @color-gray, @right-color: @color-gray, @bottom-color: @color-gray, @left-color: @color-gray ) {
+    border-top: solid 1px @top-color;
+    border-right: solid 1px @right-color;
+    border-bottom: solid 1px @bottom-color;
+    border-left: solid 1px @left-color;
+}
+
+// -------------------------------------
+// Other
+// -------------------------------------

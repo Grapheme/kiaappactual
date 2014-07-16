@@ -1,0 +1,53 @@
+$alias: "interior"
+
+article##{$alias}
+  .plane.right
+    color: #000000
+
+    .planeWrapper
+      min-width: 100%
+
+      .planeBg
+        -webkit-background-size: cover!important
+        background-size: cover!important
+        background-position: 50% 50%
+
+  .infoBlock
+    width: 362px
+    top: 30%
+    right: 10%
+
+    .title
+      height: 37px
+      h2
+        @include sprite($normal_interior_right)
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.right
+      .planeBg
+        -webkit-background-size: cover!important
+        background-size: cover!important
+        
+      .planeWrapper
+        .infoBlock
+          .title
+            //height: 36px
+
+@media screen and (max-width: $bigMinWidth)
+  article##{$alias}
+    @include setBackground($alias, #ffffff, false, true)
+
+@media screen and (min-width: $bigMinWidth+1)
+  article##{$alias}
+    @include setBackgroundBig($alias, #ffffff, false, true)
+
+    .plane.right
+      .planeWrapper
+        .infoBlock
+          width: 500px
+
+          .title
+            height: 47px
+            h2
+              @include sprite($big_interior_right)

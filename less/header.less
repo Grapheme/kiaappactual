@@ -1,0 +1,250 @@
+//HEADER
+
+.decor-top {
+  width: 100%;
+  height: 25px;
+  background-color: #c41230;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+.header {
+  position: relative;
+  z-index: 150;
+  .logo-block {
+    width: 105px;
+    height: 56px;
+    background-color: #c41230;
+    float: left;
+    .logo {
+      margin: 15px 0 0 40px;
+    }
+  }
+  .decor-left {
+    width: 100px;
+    height: 56px;
+    float: left;
+    background: url(../img/decor-left.png) no-repeat;
+  }
+  .decor-right {
+    float: left;
+    height: 56px;
+    width: 110px;
+    background: url(../img/decor-right.png) no-repeat;
+  }
+  nav {
+    float: left;
+    .clearfix();
+  }
+}
+.block-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.block-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.block-center {
+  width: 1000px;
+  height: 56px;
+  margin: 0 auto;
+}
+.navbar-nav {
+  float: left;
+  background-color: #c41230;
+  .clearfix();
+  >li {
+    float: left;
+    border-left: 1px solid #80122a;
+    &:first-child {
+      border-left: none;
+    }
+    >a, >div.social-likes {
+      cursor: pointer;
+      position: relative;
+      background: 0 0;
+      width: 75px;
+      height: 56px;
+      display: block;
+      .clearfix();
+
+      .shareDiv {
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 20;
+        height: 56px;
+      }
+
+      &:hover {
+        i {
+          &:after {
+            opacity: 1;
+          }
+          &:before {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    &.bord-none {
+      border-left: none;
+    }
+  }
+  i {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    &:before {
+      display: block;
+      margin: 0 auto;
+      content: '';
+    }
+    &:after {
+      display: block;
+      margin: 0 auto;
+      content: '';
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      transition:  opacity 0.3s;
+    }
+  }
+  .video {
+    i {
+      margin-top: 21px;
+      &:before {
+        .sprite(@video);
+      }
+      &:after {
+        .sprite(@video-h);
+        left: 25px;
+      }
+    }
+  }
+  .gear {
+    i {
+      margin-top: 18px;
+      &:before {
+        .sprite(@gears);
+      }
+      &:after {
+        .sprite(@gears-h);
+        left: 24px;
+      }
+    }
+  }
+  .doc {
+    i {
+      margin-top: 15px;
+      &:before {
+        .sprite(@doc);
+      }
+      &:after {
+        .sprite(@doc-h);
+        left: 26px;
+      }
+    }
+  }
+  .helm {
+    i {
+      margin-top: 17px;
+      &:before {
+        .sprite(@helm);
+      }
+      &:after {
+        .sprite(@helm-h);
+        left: 26px;
+      }
+    }
+  }
+  .share {
+    i {
+      margin-top: 18px;
+      &:before {
+        .sprite(@share);
+      }
+      &:after {
+        .sprite(@share-h);
+        left: 28px;
+      }
+    }
+  }
+  .vk {
+    i {
+      margin-top: 22px;
+      &:before {
+        .sprite(@vk);
+      }
+      &:after {
+        .sprite(@vk-h);
+        left: 24px;
+      }
+    }
+  }
+  .fb {
+    i {
+      margin-top: 18px;
+      &:before {
+        .sprite(@fb);
+      }
+      &:after {
+        .sprite(@fb-h);
+        left: 33px;
+      }
+    }
+  }
+  .tw {
+    i {
+      margin-top: 21px;
+      &:before {
+        .sprite(@tw);
+      }
+      &:after {
+        .sprite(@tw-h);
+        left: 27px;
+      }
+    }
+  }
+  .ok {
+    i {
+      margin-top: 18px;
+      &:before {
+        .sprite(@ok);
+      }
+      &:after {
+        .sprite(@ok-h);
+        left: 31px;
+      }
+    }
+  }
+}
+.share-block {
+  width: 0px;
+  overflow: hidden;
+  background-color: #A20E28;
+  height: 56px;
+
+  .block {
+    width: 250px;
+    padding: 15px 35px 13px;
+    height: 28px;
+    border-left: 1px solid #ab1d3a;
+  }
+  ul {
+    .clearfix();
+    float: left;
+    padding-left: 0;
+    background-color: #A20E28;
+
+    li {
+      list-style-type: none;
+    }
+
+  }
+}

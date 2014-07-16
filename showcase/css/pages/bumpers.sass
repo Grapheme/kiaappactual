@@ -1,0 +1,58 @@
+$alias: "bumpers"
+
+article##{$alias}
+  border-top-color: transparent
+  .slidesArrow
+    display: none
+
+  .plane.left
+    color: #000000
+
+  .plane.right
+    color: #ffffff
+    .planeWrapper
+      min-width: 960px
+      position: relative
+
+      .infoBlock
+        width: 362px
+        left: 0
+        bottom: 10%
+
+        .closeButton
+          display: none
+          position: absolute
+          left: 20px
+          bottom: auto
+          top: -80px
+
+        .title
+          height: 37px
+          h2
+            @include sprite($normal_bumpers_right)
+
+@media screen and (max-width: $bigMinWidth)
+  article##{$alias}
+    border-top-color: transparent
+    @include setBackground($alias, #000000, false, true, transparent)
+
+@media screen and (min-width: $bigMinWidth+1)
+  article##{$alias}
+    border-top-color: transparent
+    @include setBackgroundBig($alias, #000000, false, true, transparent)
+
+    .plane.right
+
+      .planeWrapper
+        min-width: 1600px
+
+@media screen and (min-width: $bigMinWidth+1) and (min-height: $bigMinHeight+1)
+  article##{$alias}
+
+    .plane.right
+      .planeWrapper
+        .infoBlock
+          .title
+            height: 47px
+            h2
+              @include sprite($big_bumpers_right)

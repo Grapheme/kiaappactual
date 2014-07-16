@@ -1,0 +1,262 @@
+$alias: "properties"
+
+article##{$alias}
+  background: #ffffff
+  .plane.right
+    background: #ffffff
+    .planeWrapper
+      min-width: 100%
+      color: #000000
+      font-size: 14px
+
+      .planeBg
+        background: #ffffff
+
+  .infoBlock
+    top: 10%
+    width: 1400px
+    left: 50%
+    margin-left: -700px
+    background-position: 100px 200px
+    background-repeat: no-repeat
+    min-height: 406px
+
+    &.gt
+      background-image: url(../img/properties_car_gt.jpg)
+
+    &.gt_pro
+      background-image: url(../img/properties_car_gt_pro.jpg)
+
+    .left
+      margin-right: 600px
+      position: relative
+
+      h1
+        position: absolute
+        left: 60px
+        top: 60px
+        font-size: 0
+        margin-left: 60px
+        float: right
+        margin-top: 0
+        @include sprite($normal_properties_right)
+
+      .buttonProperties
+        position: absolute
+        left: 100px
+        top: 550px
+        background-position: 0 0
+        background-repeat: no-repeat
+        background-image: url(../img/button_properties.png)
+        width: 332px
+        height: 59px
+        cursor: pointer
+
+      .carTitles
+        position: absolute
+        margin: 0
+        padding: 0
+        top: 155px
+        left: 120px
+
+    .right
+      float: right
+      width: 520px
+      padding-top: 100px
+
+      hr
+        display: none!important
+
+      .propertyBlock
+        margin: 0 0 30px 0
+
+        h2
+          display: block!important
+          font-size: 16px
+          margin-bottom: 5px
+
+        dl
+          margin: 0
+          padding: 0
+          line-height: 20px
+
+          dt
+            float: left
+            width: 240px
+
+          dd
+            padding: 0 0 0 260px
+            margin: 0
+            font-weight: bold
+
+
+@media screen and (max-height: $minHeight+100)
+  article#properties .infoBlock
+    height: 580px
+    background-position: 100px 115px
+
+    .right
+      padding-top: 40px
+
+    .left
+      .buttonProperties
+        top: 460px
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.right
+      .planeWrapper
+        .infoBlock
+          top: 50%
+          width: 1200px
+          margin-left: -600px
+          height: 340px
+          margin-top: -170px
+          background-position: 60px 100px
+          background-repeat: no-repeat
+          background-image: url(../img/pages/small/properties_car_gt.jpg)
+
+          &.gt_pro
+            background-image: url(../img/pages/small/properties_car_gt_pro.jpg)
+
+          .infoBlockContent
+            position: relative
+
+          .left
+            h1
+              top: 0
+
+            .buttonProperties
+              position: fixed
+              left: auto
+              top: auto
+              right: 270px
+              bottom: 22px
+              background-image: url(../img/pages/small/button_properties.png)
+              width: 289px
+              height: 40px
+
+            .carTitles
+              top: 95px
+              left: 305px
+
+          .right
+            padding-top: 30px
+            width: 590px
+            padding-left: 610px
+            float: none
+
+            .propertyBlock
+              margin-bottom: 23px
+
+              &.block3
+                position: absolute
+                left: 120px
+                margin-bottom: 0
+                bottom: 0
+
+              h2
+                font-size: 16px
+              dl
+                font-size: 14px
+                line-height: 17px
+
+                dt
+                  width: 210px
+                dd
+                  padding-left: 240px
+                  width: 320px
+
+@media screen and (max-width: $bigMinWidth), screen and (max-height: $bigMinHeight+250)
+  body
+    min-height: 0
+
+
+@media screen and (min-width: $bigMinWidth+1), screen and (min-height: $bigMinHeight+251)
+  body
+    min-height: 1px
+  article##{$alias}
+    background: #ffffff
+    .plane.right
+      background: #ffffff
+      .planeWrapper
+        font-size: 18px
+        line-height: 22px
+
+        .infoBlock
+          width: 1960px
+          left: 50%
+          margin-left: -980px
+          background-position: 100% 130px
+          background-repeat: no-repeat
+          background-image: url(../img/properties_car_big_gt.jpg)
+          min-height: 930px
+
+          &.gt_pro
+            background-image: url(../img/properties_car_big_gt_pro.jpg)
+
+          .left
+            margin-right: 0
+            min-height: 730px
+
+            .carTitles
+              top: 300px
+
+            h1
+              font-size: 0
+              @include sprite($big_properties_right)
+              top: 130px
+
+            .buttonProperties
+              right: 0
+              bottom: -90px
+              left: auto
+              top: auto
+
+          .right
+            float: none
+            width: 1960px
+
+            hr
+              display: block
+              border: none
+              background-position: 0 0
+              background-repeat: no-repeat
+              background-image: url(../img/pages/property_line.png)
+              width: 1960px
+              height: 14px
+              margin-bottom: 40px
+
+            .propertyBlock
+              float: left
+              margin: 0
+
+              &.block1
+                width: 720px
+
+              &.block2
+                width: 800px
+
+              &.block3
+                width: 440px
+
+              h2
+                font-size: 20px
+                margin-bottom: 60px
+
+              dl
+                dt
+                  width: 300px
+
+                dd
+                  padding-left: 320px
+                  margin-bottom: 10px
+
+
+body#body_properties
+  .mainMenuToggle
+    i
+      background-position: -38px 0
+  &:hover
+    i
+      background-position: -38px -22px

@@ -1,0 +1,89 @@
+$alias: "engine"
+
+article##{$alias}
+  .plane.left
+    color: #000000
+
+    .infoBlock
+      width: 362px
+      top: 20%
+      left: 379px
+
+      .title
+        h2
+          @include sprite($normal_engine_left)
+
+  .plane.right
+    color: #ffffff
+    .planeWrapper
+      min-width: 100%
+      position: relative
+
+      .infoBlock
+        width: 362px
+        bottom: 20%
+        left: 0
+
+        .title
+          h2
+            @include sprite($normal_engine_right)
+
+@media (max-width: $bigMinWidth), (max-height: $bigMinHeight)
+  article##{$alias}
+    @include setBackground($alias, #000000, true, true, #cccccc)
+
+@media (max-width: $minWidth), (max-height: $minHeight)
+  article##{$alias}
+    .plane.left
+      .infoBlock
+        width: 350px
+
+        .title
+          height: 36px
+
+    .plane.right
+      .planeBg
+        background-image: url("../img/pages/small/" + $alias + "_right.jpg")!important
+        -webkit-background-size: auto
+        background-size: auto
+
+      .planeWrapper
+        .infoBlock
+          width: 350px
+          bottom: 15%
+          right: 1380px
+
+          .title
+            height: 36px
+
+@media (min-width: $bigMinWidth+1), (min-height: $bigMinHeight+1)
+  article##{$alias}
+    @include setBackgroundBig($alias, #000000, true, true, #cccccc)
+
+    .plane.left
+      .infoBlock
+        width: 500px
+
+        .title
+          height: 47px
+          h2
+            @include sprite($big_engine_left)
+
+    .plane.right
+      .planeWrapper
+        .infoBlock
+          width: 500px
+          right: 1330px
+
+          .title
+            height: 47px
+            h2
+              @include sprite($big_engine_right)
+
+body#body_#{$alias}
+  .mainMenuToggle
+    i
+      background-position: -38px 0
+  &:hover
+    i
+      background-position: -38px -22px
