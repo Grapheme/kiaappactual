@@ -1500,8 +1500,14 @@ body > img {
     padding: 0;
   }
   article#about .infoBlock.social {
+    height: 100px;
     bottom: 130px;
     right: 76px;
+    overflow: hidden;
+  }
+  article#about .infoBlock.social .description {
+    position: absolute;
+    top: -110px;
   }
   article#about .infoBlock.social .aboutSocial {
     font-size: 12px;
@@ -1767,6 +1773,7 @@ body > img {
     font-size: 16px;
     line-height: 20px;
     color: #fff;
+    margin-bottom: 15px;
   }
   article#safety .plane.right .planeWrapper .infoBlock .title {
     height: 36px;
@@ -1786,6 +1793,7 @@ body > img {
     color: #fff;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 15px;
   }
   article#warranty .plane.right .planeWrapper .infoBlock .title {
     height: 36px;
