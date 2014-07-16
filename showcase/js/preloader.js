@@ -108,7 +108,7 @@
       var image, src;
       image = this.images[index];
       this.allImages[index] = new Image();
-      src = (image[0] === "/" || image.match("http://") ? image : this.baseURL + image);
+      src = image[0] === "/" || image.match("http://") || image.match("https://") ? image : this.baseURL + image;
       src = src.replace('"', "");
       return $(this.allImages[index]).attr("src", src).load((function(_this) {
         return function() {

@@ -59,11 +59,11 @@ jQuery(function($){
             flag = false;
             if(!(blockMenuRight.hasClass("active-menu"))) {
                 blockMenuRight.addClass("active-menu");
-                blockMenuRight.animate({width:"+=240"},function(){
+                blockMenuRight.animate({width:"+=303"},function(){
                     flag = true;
                 });
             } else {
-                blockMenuRight.animate({width:"-=240"},function(){
+                blockMenuRight.animate({width:"-=303"},function(){
                     blockMenuRight.removeClass("active-menu");
                     flag = true;
                 });

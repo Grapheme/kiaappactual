@@ -13,7 +13,6 @@ class Application
 
       else 'normal'
 
-
   initObjects: () ->
     @article = new Article()
     @navigation = new Navigation()

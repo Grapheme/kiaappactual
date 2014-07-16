@@ -8,6 +8,7 @@ class window.Preloader
     normal: false
     big: false
 
+
   constructor: (options) ->
     $.extend @options, options
 
@@ -43,6 +44,7 @@ class window.Preloader
       baseURLarr.pop() #remove file path from baseURL array
       @baseURL = baseURLarr.join("/") #create base url for the images in this sheet (css file's dir)
       @baseURL += "/"  unless @baseURL is "" #tack on a / if needed
+
       if document.styleSheets[i].cssRules #w3
         thisSheetRules = document.styleSheets[i].cssRules #w3
         j = 0
@@ -55,6 +57,7 @@ class window.Preloader
 
       #parse cssPile for image urls and load them into the DOM
       imgUrls = cssPile.match(/[^\(]+\.(gif|jpg|jpeg|png)/g) #reg ex to get a string of between a "(" and a ".filename"
+
       if imgUrls? and imgUrls.length > 0 and imgUrls isnt "" #loop array
         @images = []
         images = jQuery.unique(jQuery.makeArray(imgUrls)) #create array from regex obj
@@ -70,6 +73,7 @@ class window.Preloader
       return
 
     startIndex = 0
+
     @loadImage 0, () =>
       @preloaded[@media] = true
       if @options.complete
@@ -79,7 +83,8 @@ class window.Preloader
     image = @images[index]
 
     @allImages[index] = new Image()
-    src = (if (image[0] is "/" or image.match("http://")) then image else @baseURL + image) #set src either absolute or rel to css dir
+    src = if (image[0] is "/" or image.match("http://") or image.match("https://")) then image else @baseURL + image #set src either absolute or rel to css dir
+
     src = src.replace '"',""
     $(@allImages[index])
     .attr("src", src)

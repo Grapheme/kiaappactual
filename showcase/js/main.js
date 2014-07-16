@@ -135,7 +135,7 @@
           if (!blockMenuRight.hasClass("active-menu")) {
             blockMenuRight.addClass("active-menu");
             return blockMenuRight.animate({
-              width: "255"
+              width: "318"
             }, function() {
               _this.shareFlag = true;
             });
